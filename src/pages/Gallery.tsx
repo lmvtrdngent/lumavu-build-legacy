@@ -1,9 +1,20 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import project1 from "@/assets/gallery/project-1.jpg";
+import project2 from "@/assets/gallery/project-2.jpg";
+import project3 from "@/assets/gallery/project-3.jpg";
+import project4 from "@/assets/gallery/project-4.jpg";
+import project5 from "@/assets/gallery/project-5.jpg";
+import project6 from "@/assets/gallery/project-6.jpg";
+import project7 from "@/assets/gallery/project-7.jpg";
+import project8 from "@/assets/gallery/project-8.jpg";
+import project9 from "@/assets/gallery/project-9.jpg";
+import project10 from "@/assets/gallery/project-10.jpg";
 
 const Gallery = () => {
   const observerRef = useRef<IntersectionObserver | null>(null);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   useEffect(() => {
     observerRef.current = new IntersectionObserver(
@@ -23,16 +34,17 @@ const Gallery = () => {
     return () => observerRef.current?.disconnect();
   }, []);
 
-  const civilWorks = [
-    "Construction of Isolation Chamber-Mkhwanazi North",
-    "Construction of Air Valve and Isolation Chamber",
-    "R331 Road Rehabilitation",
-    "Randwater 06 Palmiet Steel Pipe 1.9M Dia",
-  ];
-
-  const generalBuilding = [
-    "Kumba Residence Katlehong",
-    "Student Residence in KZN-Zulu Land",
+  const galleryImages = [
+    { src: project1, alt: "Residential construction project with roofing work", span: "col-span-2 row-span-2" },
+    { src: project2, alt: "Civil engineering excavation and pipe installation", span: "col-span-1 row-span-1" },
+    { src: project3, alt: "Building plastering and painting project", span: "col-span-1 row-span-1" },
+    { src: project4, alt: "Multi-story building construction in progress", span: "col-span-2 row-span-1" },
+    { src: project5, alt: "Large-scale student residence development", span: "col-span-2 row-span-2" },
+    { src: project6, alt: "Heavy machinery fleet for mass earthworks", span: "col-span-1 row-span-1" },
+    { src: project7, alt: "Lumavu Trading construction equipment on site", span: "col-span-1 row-span-1" },
+    { src: project8, alt: "Traditional roofing structure installation", span: "col-span-1 row-span-2" },
+    { src: project9, alt: "Completed residential building with modern finishes", span: "col-span-2 row-span-1" },
+    { src: project10, alt: "Construction machinery lineup for civil works", span: "col-span-1 row-span-1" },
   ];
 
   return (
@@ -51,44 +63,23 @@ const Gallery = () => {
         </div>
       </section>
 
-      {/* Civil Works Gallery */}
+      {/* Masonry Gallery */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {civilWorks.map((work, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[200px]">
+            {galleryImages.map((image, index) => (
               <div
-                key={work}
-                className="bg-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow observe-animation"
+                key={index}
+                className={`${image.span} observe-animation overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer group`}
                 style={{ animationDelay: `${index * 0.1}s` }}
+                onClick={() => setSelectedImage(image.src)}
               >
-                <div className="aspect-video bg-muted rounded-xl mb-4 flex items-center justify-center">
-                  <div className="text-center p-4">
-                    <p className="text-sm text-muted-foreground">Project Image</p>
-                  </div>
-                </div>
-                <h3 className="text-lg font-bold">{work}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* General Building Gallery */}
-      <section className="py-24 bg-muted">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {generalBuilding.map((work, index) => (
-              <div
-                key={work}
-                className="bg-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow observe-animation"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="aspect-video bg-background rounded-xl mb-4 flex items-center justify-center">
-                  <div className="text-center p-4">
-                    <p className="text-sm text-muted-foreground">Project Image</p>
-                  </div>
-                </div>
-                <h3 className="text-lg font-bold">{work}</h3>
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                />
               </div>
             ))}
           </div>
@@ -109,6 +100,26 @@ const Gallery = () => {
           </Button>
         </div>
       </section>
+
+      {/* Lightbox Modal */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 cursor-pointer animate-fade-in"
+          onClick={() => setSelectedImage(null)}
+        >
+          <button
+            className="absolute top-4 right-4 text-white text-4xl hover:text-primary transition-colors"
+            onClick={() => setSelectedImage(null)}
+          >
+            ×
+          </button>
+          <img
+            src={selectedImage}
+            alt="Gallery preview"
+            className="max-w-full max-h-full object-contain rounded-lg animate-scale-in"
+          />
+        </div>
+      )}
     </main>
   );
 };
