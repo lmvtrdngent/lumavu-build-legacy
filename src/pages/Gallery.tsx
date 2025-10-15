@@ -11,6 +11,16 @@ import project7 from "@/assets/gallery/project-7.jpg";
 import project8 from "@/assets/gallery/project-8.jpg";
 import project9 from "@/assets/gallery/project-9.jpg";
 import project10 from "@/assets/gallery/project-10.jpg";
+import project11 from "@/assets/gallery/project-11.jpg";
+import project12 from "@/assets/gallery/project-12.jpg";
+import project13 from "@/assets/gallery/project-13.jpg";
+import project14 from "@/assets/gallery/project-14.jpg";
+import project15 from "@/assets/gallery/project-15.jpg";
+import project16 from "@/assets/gallery/project-16.jpg";
+import project17 from "@/assets/gallery/project-17.jpg";
+import project18 from "@/assets/gallery/project-18.jpg";
+import project19 from "@/assets/gallery/project-19.jpg";
+import project20 from "@/assets/gallery/project-20.jpg";
 
 const Gallery = () => {
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -45,6 +55,16 @@ const Gallery = () => {
     { src: project8, alt: "Traditional roofing structure installation", span: "col-span-1 row-span-2" },
     { src: project9, alt: "Completed residential building with modern finishes", span: "col-span-2 row-span-1" },
     { src: project10, alt: "Construction machinery lineup for civil works", span: "col-span-1 row-span-1" },
+    { src: project11, alt: "Road grading equipment on construction site", span: "col-span-2 row-span-1" },
+    { src: project12, alt: "Water pipe installation and reticulation works", span: "col-span-1 row-span-2" },
+    { src: project13, alt: "Pipeline installation with excavation works", span: "col-span-1 row-span-1" },
+    { src: project14, alt: "Modern student residence complex with parking", span: "col-span-2 row-span-2" },
+    { src: project15, alt: "Excavation work at commercial construction site", span: "col-span-1 row-span-1" },
+    { src: project16, alt: "Civil works pipeline installation project", span: "col-span-1 row-span-1" },
+    { src: project17, alt: "Completed residential apartment complex", span: "col-span-2 row-span-1" },
+    { src: project18, alt: "Modern kitchen interior finishing work", span: "col-span-1 row-span-1" },
+    { src: project19, alt: "Heavy equipment transport logistics", span: "col-span-1 row-span-1" },
+    { src: project20, alt: "Luxury residential property with pool construction", span: "col-span-2 row-span-2" },
   ];
 
   return (
