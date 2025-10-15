@@ -108,9 +108,6 @@ const Services = () => {
             <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in-up">
               Our Services
             </h1>
-            <p className="text-xl text-muted-foreground animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              Comprehensive construction and maintenance solutions tailored to your needs
-            </p>
           </div>
         </div>
       </section>
@@ -152,9 +149,6 @@ const Services = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Let us bring your vision to life
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Contact us today to discuss your project and discover how we can help you achieve your goals.
-          </p>
           <Button asChild size="lg" variant="secondary" className="rounded-full px-8">
             <Link to="/contact">Contact Us Today</Link>
           </Button>

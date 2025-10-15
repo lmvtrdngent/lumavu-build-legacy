@@ -71,9 +71,6 @@ const About = () => {
             <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in-up">
               Who Are We?
             </h1>
-            <p className="text-xl text-muted-foreground animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              Building South Africa's future since 2013
-            </p>
           </div>
         </div>
       </section>

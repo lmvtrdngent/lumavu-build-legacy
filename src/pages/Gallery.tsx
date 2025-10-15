@@ -54,9 +54,6 @@ const Gallery = () => {
       {/* Civil Works Gallery */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 observe-animation">
-            Civil Works
-          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {civilWorks.map((work, index) => (
               <div
@@ -79,9 +76,6 @@ const Gallery = () => {
       {/* General Building Gallery */}
       <section className="py-24 bg-muted">
         <div className="container mx-auto px-4 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 observe-animation">
-            General Building
-          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {generalBuilding.map((work, index) => (
               <div
