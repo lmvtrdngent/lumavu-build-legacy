@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { toast } from "sonner";
 
@@ -12,6 +13,7 @@ const Contact = () => {
     name: "",
     email: "",
     phone: "",
+    service: "",
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -41,7 +43,7 @@ const Contact = () => {
     try {
       // Create mailto link with form data
       const subject = `New Contact Form Submission from ${formData.name}`;
-      const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
+      const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0AService Interested In: ${formData.service}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
       const mailtoLink = `mailto:lumavutrading@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
       
       window.location.href = mailtoLink;
@@ -53,6 +55,7 @@ const Contact = () => {
         name: "",
         email: "",
         phone: "",
+        service: "",
         message: "",
       });
     } catch (error) {
@@ -193,6 +196,29 @@ const Contact = () => {
                     className="mt-2"
                     
                   />
+                </div>
+
+                <div>
+                  <Label htmlFor="service">Service Interested In</Label>
+                  <Select
+                    value={formData.service}
+                    onValueChange={(value) => setFormData({ ...formData, service: value })}
+                    required
+                  >
+                    <SelectTrigger className="mt-2">
+                      <SelectValue placeholder="Select a service" />
+                    </SelectTrigger>
+                    <SelectContent className="bg-white">
+                      <SelectItem value="Civil Works" className="text-gray-900">Civil Works</SelectItem>
+                      <SelectItem value="General Building" className="text-gray-900">General Building</SelectItem>
+                      <SelectItem value="Road Works" className="text-gray-900">Road Works</SelectItem>
+                      <SelectItem value="Water & Sewer Reticulation" className="text-gray-900">Water & Sewer Reticulation</SelectItem>
+                      <SelectItem value="Electrical Infrastructure" className="text-gray-900">Electrical Infrastructure</SelectItem>
+                      <SelectItem value="Mass Earthworks" className="text-gray-900">Mass Earthworks</SelectItem>
+                      <SelectItem value="Plant Hire" className="text-gray-900">Plant Hire</SelectItem>
+                      <SelectItem value="Other" className="text-gray-900">Other</SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
 
                 <div>

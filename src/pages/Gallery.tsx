@@ -31,6 +31,8 @@ import project27 from "@/assets/gallery/project-27.jpg";
 import project28 from "@/assets/gallery/project-28.jpg";
 import project29 from "@/assets/gallery/project-29.jpg";
 import project30 from "@/assets/gallery/project-30.jpg";
+import project31 from "@/assets/gallery/project-31.jpg";
+import project32 from "@/assets/gallery/project-32.jpg";
 
 const Gallery = () => {
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -85,6 +87,8 @@ const Gallery = () => {
     { src: project28, alt: "Lumavu Trading company truck on site", span: "col-span-1 row-span-1" },
     { src: project29, alt: "Residential property exterior finishing", span: "col-span-1 row-span-1" },
     { src: project30, alt: "Swimming pool construction and waterproofing", span: "col-span-2 row-span-2" },
+    { src: project31, alt: "Concrete slab pouring and finishing work", span: "col-span-2 row-span-1" },
+    { src: project32, alt: "Lumavu Trading excavator fleet on site", span: "col-span-1 row-span-2" },
   ];
 
   return (
