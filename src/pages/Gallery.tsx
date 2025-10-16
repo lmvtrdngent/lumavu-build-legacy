@@ -21,6 +21,16 @@ import project17 from "@/assets/gallery/project-17.jpg";
 import project18 from "@/assets/gallery/project-18.jpg";
 import project19 from "@/assets/gallery/project-19.jpg";
 import project20 from "@/assets/gallery/project-20.jpg";
+import project21 from "@/assets/gallery/project-21.jpg";
+import project22 from "@/assets/gallery/project-22.jpg";
+import project23 from "@/assets/gallery/project-23.jpg";
+import project24 from "@/assets/gallery/project-24.jpg";
+import project25 from "@/assets/gallery/project-25.jpg";
+import project26 from "@/assets/gallery/project-26.jpg";
+import project27 from "@/assets/gallery/project-27.jpg";
+import project28 from "@/assets/gallery/project-28.jpg";
+import project29 from "@/assets/gallery/project-29.jpg";
+import project30 from "@/assets/gallery/project-30.jpg";
 
 const Gallery = () => {
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -65,6 +75,16 @@ const Gallery = () => {
     { src: project18, alt: "Modern kitchen interior finishing work", span: "col-span-1 row-span-1" },
     { src: project19, alt: "Heavy equipment transport logistics", span: "col-span-1 row-span-1" },
     { src: project20, alt: "Luxury residential property with pool construction", span: "col-span-2 row-span-2" },
+    { src: project21, alt: "Completed residential home with modern finishes", span: "col-span-1 row-span-1" },
+    { src: project22, alt: "Residential building under construction", span: "col-span-1 row-span-2" },
+    { src: project23, alt: "Modern interior staircase installation", span: "col-span-1 row-span-2" },
+    { src: project24, alt: "Multi-level residential construction project", span: "col-span-2 row-span-1" },
+    { src: project25, alt: "Heavy machinery for mass earthworks", span: "col-span-2 row-span-2" },
+    { src: project26, alt: "Residential construction in progress", span: "col-span-1 row-span-1" },
+    { src: project27, alt: "Foundation and pillar construction work", span: "col-span-2 row-span-1" },
+    { src: project28, alt: "Lumavu Trading company truck on site", span: "col-span-1 row-span-1" },
+    { src: project29, alt: "Residential property exterior finishing", span: "col-span-1 row-span-1" },
+    { src: project30, alt: "Swimming pool construction and waterproofing", span: "col-span-2 row-span-2" },
   ];
 
   return (
