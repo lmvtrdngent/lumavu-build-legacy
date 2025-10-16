@@ -1,73 +1,100 @@
-# Welcome to your Lovable project
+# Lumavu Trading Enterprises
 
-## Project info
+A professional website for Lumavu Trading Enterprises - Excellence In Construction Services.
 
-**URL**: https://lovable.dev/projects/9d5149fa-a21f-4441-bf7f-22109a3912b7
+## About
 
-## How can I edit this code?
+Lumavu Trading Enterprises is a 100% youth black-owned construction company specializing in:
+- Civil Engineering
+- General Building
+- Plant Hire
+- Facilities Maintenance
 
-There are several ways of editing your application.
+We are CIDB accredited with BBBEE Level 1 certification.
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/9d5149fa-a21f-4441-bf7f-22109a3912b7) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
+## Technologies Used
 
 This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **Vite** - Fast build tool and development server
+- **TypeScript** - Type-safe JavaScript
+- **React** - Modern UI library
+- **shadcn-ui** - Beautiful UI components
+- **Tailwind CSS** - Utility-first CSS framework
 
-## How can I deploy this project?
+## Development Setup
 
-Simply open [Lovable](https://lovable.dev/projects/9d5149fa-a21f-4441-bf7f-22109a3912b7) and click on Share -> Publish.
+### Prerequisites
 
-## Can I connect a custom domain to my Lovable project?
+- Node.js (v18 or higher) - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- npm or yarn package manager
 
-Yes, you can!
+### Installation
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+```sh
+# Clone the repository
+git clone https://github.com/lmvtrdngent/lumavu-build-legacy.git
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+# Navigate to the project directory
+cd lumavu-build-legacy
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+### Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint
+
+## Deployment
+
+This project is configured for deployment on **Cloudflare Pages**.
+
+### Cloudflare Pages Deployment
+
+1. **Connect to Cloudflare Pages:**
+   - Go to [Cloudflare Dashboard](https://dash.cloudflare.com/)
+   - Navigate to Pages
+   - Click "Connect to Git"
+   - Select your GitHub repository
+
+2. **Build Configuration:**
+   - **Build command:** `npm run build`
+   - **Build output directory:** `dist`
+   - **Node.js version:** 18
+
+3. **Environment Variables:**
+   - No additional environment variables required for basic deployment
+
+4. **Custom Domain:**
+   - In Cloudflare Pages dashboard, go to Custom domains
+   - Add your domain and follow DNS configuration instructions
+
+### Manual Deployment
+
+```sh
+# Build the project
+npm run build
+
+# The built files will be in the 'dist' directory
+# Upload the contents of 'dist' to your web server
+```
+
+## Project Structure
+
+```
+lumavu-build-legacy/
+├── public/          # Static assets
+├── src/             # Source code
+│   ├── components/  # React components
+│   ├── pages/       # Page components
+│   └── main.tsx     # Application entry point
+├── index.html       # HTML template
+└── package.json     # Dependencies and scripts
+```
